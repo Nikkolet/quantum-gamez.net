@@ -1,0 +1,262 @@
+/* if you are using any Google fonts change the font names below to your fonts. 
+Any spaces in your font name should be replaced with a +. 
+Fonts are separated by a | */
+
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Lato');
+@import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Luxurious+Roman&display=swap');
+:root {
+    /* change the values below to your colors from your palette */
+    --primary-color: #010101;
+    /*Black*/
+    --secondary-color: #071D3E;
+    /*Dark Blue */
+    --accent1-color: #600B10;
+    /* Burgandy */
+    --accent2-color: #FFFFFF;
+    /*White*/
+    /* change the values below to your chosen font(s) */
+    --heading-font: "Luxurious Roman", "Gideon Roman", sans-serif;
+    --paragraph-font: Georgia, "ehttps://glitch.com/edit/#!/personal-website-quantum-gamez?path=site-plan.css%3A1%3A0lvetica", sans-serif;
+    /* these colors below should be chosen from among your palette colors above */
+    --headline-color-on-white: black;
+    /* headlines on a white background */
+    --headline-color-on-color: white;
+    /* headlines on a colored background */
+    --paragraph-color-on-white: black;
+    /* paragraph text on a white background */
+    --paragraph-color-on-color: #FFFFFF;
+    /*ph text on a colored background */
+    --paragraph-background-color: #010101;
+    --nav-link-color: #FFFFFF;
+    --nav-background-color: #071D3E;
+    --nav-hover-link-color: #FFFFFF;
+    --nav-hover-background-color: #600B10;
+}
+
+
+/*  Look around below...but DON'T CHANGE ANYTHING! */
+
+html {
+    background-color: var(--primary-color);
+    background-image: url(https://www.asiafundmanagers.com/wp-content/uploads/2021/10/Asias-space-ambitions.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body {
+    height: auto;
+    margin: 0 auto;
+    background-color: white;
+    padding: 1em;
+    width: 75%;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    display: block;
+    font-family: var(--heading-font);
+    color: var(--headline-color-on-white);
+    text-align: center;
+}
+
+header {
+    padding: 1em;
+    text-align: center;
+    color: var(--paragraph-color-on-color);
+    background-color: var(--paragraph-background-color);
+    background-image: url(https://media.istockphoto.com/photos/stars-and-nebula-picture-id1174826912?k=20&m=1174826912&s=612x612&w=0&h=74fu9QdCwSDuHJQ8SZ3i3qhqsbHLP1N8jVtpqtSL0-M=);
+    background-size: cover;
+    height: 200px;
+    margin-top: -20px;
+}
+
+header>h1,
+header>h2 {
+    color: var(--headline-color-on-color);
+}
+
+p {
+    font-family: var(--paragraph-font);
+    color: var(--paragraph-color);
+    padding: 1em;
+}
+
+.colors {
+    width: 100%;
+    min-width: 350px;
+    margin: auto;
+    text-align: center;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+.colors th {
+    background-color: #999999;
+    border: 2px solid black;
+}
+
+.colors td {
+    width: 25%;
+    height: 3em;
+    border: 2px solid black;
+}
+
+.primary {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+}
+
+.secondary {
+    background-color: var(--secondary-color);
+    color: #FFFFFF;
+}
+
+.accent1 {
+    background-color: var(--accent1-color);
+    color: #FFFFFF;
+}
+
+.accent2 {
+    background-color: var(--accent2-color);
+    color: #010101;
+}
+
+p.colored {
+    display: block;
+    background-color: var(--paragraph-background-color);
+    color: var(--paragraph-color-on-color);
+}
+
+nav {
+    background-color: var(--nav-background-color);
+    line-height: 3em;
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: -35px;
+}
+
+nav>ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav li {
+    text-align: center;
+}
+
+nav a {
+    padding: 1em;
+    min-width: 70px;
+    margin-left: 200px;
+}
+
+nav a:link,
+nav a:visited {
+    color: var(--nav-link-color);
+}
+
+nav a:hover {
+    color: var(--nav-hover-link-color);
+    background-color: var(--nav-hover-background-color);
+}
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.sitemap {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(6, 15%);
+    grid-template-rows: 3em 1.5em 1.5em 3em;
+    grid-template-areas: ". . home home . ." ". . . top . ." ". left left right right ." "page2 page2 . . page3 page3";
+}
+
+.sitemap>div {
+    text-align: center;
+}
+
+.sm-home {
+    grid-area: home;
+    background-color: #010101;
+    color: #FFFFFF;
+    line-height: 3em;
+}
+
+.sm-page2 {
+    grid-area: page2;
+    background-color: #071D3E;
+    color: #FFFFFF;
+    line-height: 3em;
+}
+
+.sm-page3 {
+    grid-area: page3;
+    background-color: #600B10;
+    color: #FFFFFF;
+    line-height: 3em;
+}
+
+.top {
+    grid-area: top;
+    border-left: 1px solid;
+}
+
+.left {
+    grid-area: left;
+    border-top: 1px solid;
+    border-left: 1px solid;
+}
+
+.right {
+    grid-area: right;
+    border-top: 1px solid;
+    border-right: 1px solid;
+}
+
+.Articles-Images {
+    width: 300px;
+}
+
+.map {
+    border: 1px solid #23232F;
+}
+
+p {
+    text-align: center;
+    float: center;
+}
+
+#color {
+    border: 1px solid #23232F;
+}
+
+.grid-item {
+    grid-template-rows: 3em 1.5em 1.5em 3em;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    background-color: #2196F3;
+    margin: 5px;
+    overflow-wrap: break-word;
+}
+
+.blank {
+    background-color: #F5F4F4;
+}
+
+.bottom-nav {
+    margin-bottom: -20px;
+    margin-top: 20px;
+}

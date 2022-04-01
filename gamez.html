@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Articles</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="gamez.css" />
+</head>
+<div id="content">
+    <header>
+        <div class="logo-box">
+            <img class="logo-top" src="https://cdn.glitch.global/f2933566-d661-43f0-bf43-e4ffbfccbcb9/Quantum_Gamez_Logo.jpg?v=1645219790816" alt="Dry Oar boating logo" style="width: 120px" />
+        </div>
+        <nav class="top-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gamez.html">Gamez</a></li>
+                <li><a href="site-plan.html">Site Plan</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+
+<div class="banner-box">
+    <img class="title_img" src="https://cdn.glitch.global/f2933566-d661-43f0-bf43-e4ffbfccbcb9/giphy.gif?v=1647582922812" height="300" width="200px" />
+    <h1 class="title">Articles</h1>
+</div>
+
+<body>
+    <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')">
+        Show all
+      </button>
+        <button class="btn" onclick="filterSelection('people')">People</button>
+        <button class="btn" onclick="filterSelection('theory')">Theories</button>
+        <button class="btn" onclick="filterSelection('technology')">
+        Technology
+      </button>
+        <button class="btn" onclick="filterSelection('new')">New</button>
+    </div>
+
+    <div class="container">
+        <div class="filterDiv people">
+            <img class="filter_img" src="https://cdn.glitch.global/f2933566-d661-43f0-bf43-e4ffbfccbcb9/black-body-radiation-game.gif?v=1645916318103" />
+            <p>Thomas Young</p>
+            <button class="read">
+          <a
+            href="https://en.wikipedia.org/wiki/Thomas_Young_(scientist)"
+            target="_blank"
+            >Read</a
+          >
+        </button>
+        </div>
+        <div class="filterDiv people">
+            <img class="filter_img" src="https://cdn.glitch.global/f2933566-d661-43f0-bf43-e4ffbfccbcb9/black-body-radiation-game.gif?v=1645916318103" />
+            <p>Max Planck</p>
+            <button class="read">
+          <a href="https://en.wikipedia.org/wiki/Max_Planck" target="_blank"
+            >Read</a
+          >
+        </button>
+        </div>
+        <div class="filterDiv people">
+            <img class="filter_img" src="https://cdn.glitch.global/f2933566-d661-43f0-bf43-e4ffbfccbcb9/black-body-radiation-game.gif?v=1645916318103" />
+            <p>Albert Einstein</p>
+            <button class="read">
+          <a
+            href="https://en.wikipedia.org/wiki/Albert_Einstein"
+            target="_blank"
+            >Read</a
+          >
+        </button>
+        </div>
+        <div class="filterDiv people">
+            <img class="filter_img" src="https://cdn.glitch.global/f2933566-d661-43f0-bf43-e4ffbfccbcb9/black-body-radiation-game.gif?v=1645916318103" />
+            <p>Niels Bohr</p>
+            <button class="read">
+          <a href="https://en.wikipedia.org/wiki/Niels_Bohr" target="_blank"
+            >Read</a
+          >
+        </button>
+        </div>
+        <div class="filterDiv theory new">
+            <img class="filter_img" src="https://cdn.glitch.global/f2933566-d661-43f0-bf43-e4ffbfccbcb9/black-body-radiation-game.gif?v=1645916318103" />
+            <p>Time Travel</p>
+            <button class="read">
+          <a href="https://en.wikipedia.org/wiki/Time_travel" target="_blank"
+            >Read</a
+          >
+        </button>
+        </div>
+        <div class="filterDiv theory">
+            <img class="filter_img" src="#" />
+            <p>Multiverse</p>
+            <button class="read">
+          <a href="https://en.wikipedia.org/wiki/Multiverse" target="_blank"
+            >Read</a
+          >
+        </button>
+        </div>
+        <div class="filterDiv technology new">
+            <img class="filter_img" src="https://cdn.glitch.global/f2933566-d661-43f0-bf43-e4ffbfccbcb9/black-body-radiation-game.gif?v=1645916318103" />
+            <p>Quantum Computing</p>
+            <button class="read">
+          <a
+            href="https://en.wikipedia.org/wiki/Quantum_computing"
+            target="_blank"
+            >Read</a
+          >
+        </button>
+        </div>
+        <div class="filterDiv people new">
+            <img class="filter_img" src="https://cdn.glitch.global/f2933566-d661-43f0-bf43-e4ffbfccbcb9/black-body-radiation-game.gif?v=1645916318103" />
+            <p>Chen Ning Yang</p>
+            <button class="read">
+          <a href="https://en.wikipedia.org/wiki/Yang_Chen-Ning" target="_blank"
+            >Read</a
+          >
+        </button>
+        </div>
+    </div>
+
+    <script>
+        filterSelection("all");
+
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("filterDiv");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                    element.className += " " + arr2[i];
+                }
+            }
+        }
+
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+    <script src="articles.js"></script>
+    <div id="content-bottom">
+        <header>
+            <div class="logo-box">
+                <img class="logo" src="https://cdn.glitch.global/f2933566-d661-43f0-bf43-e4ffbfccbcb9/Quantum_Gamez_Logo.jpg?v=1645219790816" alt="Dry Oar boating logo" style="width: 120px" />
+            </div>
+            <nav class="bottom-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gamez.html">Gamez</a></li>
+                    <li><a href="site-plan.html">Site Plan</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <footer>
+        <p id="copy">&copy; 2022 Dry Oar - Nikkolet Ashby - WDD-130-14</p>
+        <div class="social">
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/Exciting-Expeditions-112002568053339/?ref=pages_you_manage" target="_blank" rel="noreferrer noopener">
+                        <img src="https://byui-cit.github.io/wdd130/images/icons/color/facebook.png" alt="Facebook       Icon" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/nikkoletashby/" target="_blank" rel="noreferrer noopener">
+                        <img src="https://byui-cit.github.io/wdd130/images/icons/color/instagram.png" alt="Instagram Icon" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/AshbyNikkolet" target="_blank" rel="noreferrer noopener">
+                        <img src="https://byui-cit.github.io/wdd130/images/icons/color/twitter.png" alt="Twitter Icon" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

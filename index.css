@@ -1,0 +1,431 @@
+/* if you are using any Google fonts change the font names below to your fonts. 
+Any spaces in your font name should be replaced with a +. 
+Fonts are separated by a | */
+
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Lato');
+@import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Luxurious+Roman&display=swap');
+:root {
+    /* change the values below to your colors from your palette */
+    --primary-color: #010101;
+    /*Black*/
+    --secondary-color: #071D3E;
+    /*Dark Blue */
+    --accent1-color: #600B10;
+    /* Burgandy */
+    --accent2-color: #FFFFFF;
+    /*White*/
+    /* change the values below to your chosen font(s) */
+    --heading-font: "Luxurious Roman", "Gideon Roman", sans-serif;
+    --paragraph-font: Georgia, "Hehttps://glitch.com/edit/#!/personal-website-quantum-gamez?path=site-plan.css%3A1%3A0lvetica", sans-serif;
+    /* these colors below should be chosen from among your palette colors above */
+    --headline-color-on-white: black;
+    /* headlines on a white background */
+    --headline-color-on-color: white;
+    /* headlines on a colored background */
+    --paragraph-color-on-white: black;
+    /* paragraph text on a white background */
+    --paragraph-color-on-color: #FFFFFF;
+    /*ph text on a colored background */
+    --paragraph-background-color: #010101;
+    --nav-link-color: #FFFFFF;
+    --nav-background-color: #071D3E;
+    --nav-hover-link-color: #FFFFFF;
+    --nav-hover-background-color: #600B10;
+}
+
+
+/*  Look around below...but DON'T CHANGE ANYTHING! */
+
+html {
+    background-color: var(--primary-color);
+    background-image: url(https://www.asiafundmanagers.com/wp-content/uploads/2021/10/Asias-space-ambitions.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body {
+    height: auto;
+    margin: 0 auto;
+    background-color: white;
+    width: 75%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    display: block;
+    font-family: var(--heading-font);
+    color: var(--headline-color-on-white);
+    text-align: center;
+}
+
+header {
+    padding: 1em;
+    text-align: center;
+    color: var(--paragraph-color-on-color);
+    background-color: var(--paragraph-background-color);
+    background-image: url(https://media.istockphoto.com/photos/stars-and-nebula-picture-id1174826912?k=20&m=1174826912&s=612x612&w=0&h=74fu9QdCwSDuHJQ8SZ3i3qhqsbHLP1N8jVtpqtSL0-M=);
+    background-size: cover;
+}
+
+header>h1,
+header>h2 {
+    color: var(--headline-color-on-color);
+}
+
+p {
+    font-family: var(--paragraph-font);
+    color: var(--paragraph-color);
+    padding: 1em;
+    text-align: center;
+}
+
+.primary {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+}
+
+.secondary {
+    background-color: var(--secondary-color);
+    color: #FFFFFF;
+}
+
+.accent1 {
+    background-color: var(--accent1-color);
+    color: #FFFFFF;
+}
+
+.accent2 {
+    background-color: var(--accent2-color);
+    color: #010101;
+}
+
+p.colored {
+    display: block;
+    background-color: var(--paragraph-background-color);
+    color: var(--paragraph-color-on-color);
+}
+
+.bottom-nav {
+    margin: 0px;
+    width: 100%;
+}
+
+nav {
+    background-color: var(--nav-background-color);
+    line-height: 3em;
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: -16px;
+    margin-left: -16px;
+    margin-right: -20px;
+    width: 103%;
+}
+
+nav>ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav li {
+    text-align: center;
+    margin-left: -30px;
+}
+
+nav a {
+    padding: 1em;
+    min-width: 70px;
+    margin-left: 200px;
+}
+
+nav a:link,
+nav a:visited {
+    color: var(--nav-link-color);
+}
+
+nav a:hover {
+    color: var(--nav-hover-link-color);
+    background-color: var(--nav-hover-background-color);
+}
+
+.logo {
+    float: left;
+    height: 45px;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-top: 7px;
+}
+
+form {
+    /* Center the form on the page */
+    margin: 0 auto;
+    width: 400px;
+    /* Form outline */
+    padding: 1em;
+    border: 1px solid #CCCCCC;
+    border-radius: 1em;
+    margin-bottom: 1em;
+}
+
+form li {
+    list-style: none;
+}
+
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+form li+li {
+    margin-top: 1em;
+}
+
+label {
+    /* Uniform size & alignment */
+    display: inline-block;
+    width: 90px;
+    text-align: left;
+}
+
+input,
+textarea {
+    /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+    font: 1em sans-serif;
+    /* Uniform text field size */
+    width: 300px;
+    box-sizing: border-box;
+    /* Match form field borders */
+    border: 1px solid #999999;
+}
+
+input:focus,
+textarea:focus {
+    /* Additional highlight for focused elements */
+    border-color: #000000;
+}
+
+textarea focus {
+    /* Align multiline text fields with their labels */
+    vertical-align: top;
+    /* Provide space to type some text */
+    height: 5em;
+}
+
+button {
+    /* This extra margin represent roughly the same space as the space
+     between the labels and their text fields */
+    margin-left: .5em;
+    position: relative;
+    line-height: 1em;
+    width: 8em;
+    background-color: black;
+    font-size: 1.2em;
+    border-radius: 50px;
+    color: white;
+}
+
+#feedback {
+    background-color: antiquewhite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0.5em;
+    /* make this element invisible until we are ready for it */
+    display: none;
+}
+
+.moveDown {
+    margin-top: 3em;
+}
+
+.social li {
+    list-style-type: none;
+    margin: 0;
+    padding: 1em;
+    overflow: hidden;
+    display: inline;
+    float: left;
+    text-align: center;
+}
+
+#content {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+footer #copy {
+    float: left;
+    padding-left: 1em;
+    margin-top: -20px;
+}
+
+footer .social {
+    float: right;
+    height: 55px;
+    padding-top: 0px;
+    margin-top: -38px;
+    margin-left: -100px;
+}
+
+footer .social img {
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
+    margin-left: -10px;
+    border-radius: 60%;
+}
+
+footer {
+    height: 35px;
+    background-color: #ffffff;
+    width: 100%;
+    margin-top: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 300px;
+    align-items: center;
+    margin-left: 198px;
+    margin-top: 200px;
+    color: transparent;
+}
+
+.banner-box span {
+    width: 75%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+hr {
+    position: relative;
+    top: 20px;
+    border: none;
+    height: 10px;
+    width: 100%;
+    background: black;
+    margin-bottom: 50px;
+}
+
+.p {
+    margin-bottom: -50px;
+}
+
+.why {
+    padding: 1em;
+    margin: 0 auto 1em;
+    outline: 2px dotted #101010;
+    outline-offset: -10px;
+    border-radius: 25px;
+    background-color: rgba(96, 11, 16, 0.2);
+}
+
+.intro {
+    margin-top: 40px;
+    margin-bottom: -10px;
+}
+
+.title {
+    color: #FFFFFF;
+    margin-top: -150px;
+    top: 10px;
+    left: 10px;
+    font-weight: 600;
+    font-size: 100px;
+    position: relative;
+    animation: fade 400ms ease-in-out forwards;
+}
+
+.title_img {
+    width: 100%;
+}
+
+@keyframes fade {
+    0% {
+        top: 10px;
+        left: 10px;
+        filter: blur(15px);
+        opacity: 0;
+    }
+    50% {
+        filter: blur(10px);
+        opacity: 0.9;
+    }
+}
+
+.fundamentals {
+    width: 50%;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.fundamental_text {
+    margin-top: 20px;
+    float: right;
+    word-wrap: break-word;
+    width: 40%;
+}
+
+iframe {
+    margin-left: -20px;
+    margin-bottom: -10px;
+    width: 90%;
+    height: 300px;
+}
+
+.iframe_technology {
+    margin-top: 20px;
+    margin-bottom: -20px;
+}
+
+quantum_technology {
+    margin-bottom: -20px;
+    margin-top: -30px;
+}
+
+.atom {
+    display: inline;
+    width: 50%;
+    margin-left: 10px;
+    margin-top: -260px;
+}
+
+#atom_id {
+    margin-top: 20px;
+    float: right;
+    word-wrap: break-word;
+    width: 40%;
+    margin-bottom: -10px;
+    width: 90%;
+}
+
+.classic_physics {
+    margin-bottom: -50px;
+}
+
+.quantum_physics {
+    margin-top: -50px;
+}
+
+.img_particle {
+    margin-top: 10px;
+}
